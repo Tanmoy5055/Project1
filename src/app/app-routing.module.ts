@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component'
 import { DashboardComponent } from './dashboard/dashboard.component'
+import { AuthguardGuard} from './authguard.guard'
 
 const routes: Routes = [
   {path: '', redirectTo:'home',pathMatch:'full'},
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'login', component:LoginComponent},
   {path:'signup',component:SignupComponent},
-  {path:'dashboard',component:DashboardComponent}
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthguardGuard]},
 
 ];
 

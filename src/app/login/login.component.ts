@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ErrorHandler, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import { ConctService } from '../conct.service';
 import { StorageService } from '../storage.service';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -31,6 +32,12 @@ export class LoginComponent implements OnInit {
         this.storage.setData(this.user.email, this.user.full_name, this.user.token, this.user.user_id)
         console.log(this.user);
         this.route.navigate(['../dashboard']);
+      },
+
+      error=>{
+        console.log(error);
+        alert('Invalid Login!!');
+
       }
     )
   }
