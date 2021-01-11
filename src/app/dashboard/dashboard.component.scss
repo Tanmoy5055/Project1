@@ -1,0 +1,21 @@
+$primary: #37517e;
+$secondary: #47b2e4;
+
+.container-fluid{
+    background-color: $primary;
+    height: 700px;
+    width: 100%;
+
+}
+
+h1{
+padding-top: 200px;
+color: #fff;
+font-size: 50px;
+}
+h1:hover{
+    color: $secondary;
+    transform: translateY(-10px);
+    transition: ease-in-out 0.3s;
+    
+}

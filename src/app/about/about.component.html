@@ -1,0 +1,32 @@
+<div class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="section-head col-sm-12">
+                <h4>About Us</h4>
+                <p>ProLearn is a Web Portal where you can learn Web design, Web developing using HTML, CSS, 
+                    Javascript, Java, Python, Angular, NodeJS and bunch of other Programming languages.
+                    We also provide you Photo and Video editing skills along with Graphic Design, we also provide 
+                    proffessional Photography skills as well. 
+                    <br><br>
+                    We provide free and paid resources regarding web design and development to inspire design-focused frontend developers.
+                    <br><br>
+                </p>
+                <span><h4>Our Team</h4></span>
+                <p>We have an incredible and very cooperative team to work together and always provide you best services.</p>
+            </div>
+            <div *ngFor="let a of team" class="col-lg-4 col-sm-6">
+                <div class="item">
+                    <span class="icon feature-box-col-one">
+                        <i><img class="icon" src="{{a.image}}"></i>
+                    </span>
+                    <h6>{{a.name}}</h6>
+                    <p>{{a.role}}</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <p>&copy; Copyright 2021 | Created by Tanmoy</p>
+    </footer>

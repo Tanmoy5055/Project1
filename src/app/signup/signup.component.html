@@ -1,0 +1,55 @@
+
+<div class="container-fluid">
+	<div class="container">
+	  <form [formGroup]="signupData" (ngSubmit)="myRegister()">
+		<h2 class="text-center">SIGN UP</h2>
+		<div class="form-group">
+			<div class="input-group">
+				<label>Enter Your Firstname</label>
+				<input type="text" formControlName="firstname">
+				<div class="msg" *ngIf="signupData.get('firstname').hasError('required') && signupData.get('firstname').touched">
+					Firstname Cannot be empty !!
+				</div>
+			</div>
+        </div>
+        <div class="form-group">
+			<div class="input-group">
+				<label>Enter Your Lastname</label>
+				<input type="text"  formControlName="lastname" required="required">
+				<div class="msg" *ngIf="signupData.get('lastname').hasError('required') && signupData.get('lastname').touched">
+					Lastname Cannot be empty !!
+				</div>
+			</div>
+        </div>
+        <div class="form-group">
+			<div class="input-group">
+				<label>Enter Your Email</label>
+				<input type="email" formControlName="email" required="required">
+				<div class="msg" *ngIf="signupData.get('email').hasError('required') && signupData.get('email').touched">
+					Email Cannot be empty !!
+				</div>
+				<div class="msg" *ngIf="signupData.get('email').hasError('pattern') && signupData.get('email').touched">
+					Invalid Email !!
+				</div>
+			</div>
+        </div>
+		<div class="form-group">
+			<div class="input-group">
+				<label>Enter Your Password</label>
+				<input type="text" formControlName="password"  required="required">
+				<div class="msg" *ngIf="signupData.get('password').hasError('required') && signupData.get('password').touched">
+					Password Cannot be empty !!
+				</div>
+				<div class="msg" *ngIf="signupData.get('password').hasError('pattern') && signupData.get('password').touched">
+					Invalid Password Format!!
+				</div>
+			</div>
+        </div>
+		
+			<button type="submit" class="btn btn-default">Submit</button>
+       
+	  </form>
+	  <div class="modal-footer"></div>
+	  <p class="text-center">Already have an accaount?<a routerLink="../login">Sign In</a></p>
+	</div>
+	</div>

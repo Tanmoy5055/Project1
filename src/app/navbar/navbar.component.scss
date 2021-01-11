@@ -1,0 +1,40 @@
+
+$primary: #37517e;
+$secondary: #47b2e4;
+
+.logo{
+	font-size: 32px;
+	font-weight: bold;
+	color: #fff;
+	padding-left: 5%;
+}
+.btn-group .btn-outline-primary{
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-top-right-radius: 25px;
+	color: #fff;
+	font-size: 18px;
+	border-color: $secondary;
+}
+.btn-group .btn-outline-primary:hover{
+	background-color: $secondary;
+}
+.navbar-nav{
+	padding-right: 5%;
+}
+li{
+	padding: 15px;
+	font-size: 18px;
+}
+.navbar{
+	background-color: $primary;
+	opacity: .9;
+}
+a:hover{
+	font-weight: bold;
+	color: $secondary;
+}
+.scroll{
+	scroll-behavior: smooth;
+}

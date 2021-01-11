@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="container">
+	<h2 class="text-center">SIGN IN</h2>
+	<form [formGroup]="loginData" (ngSubmit)="mySubmit()">
+		<div class="form-group">
+		<label>Enter Your Email</label>
+		<input type="text"  formControlName="email">
+		<div class="msg" *ngIf="loginData.get('email').hasError('required') && loginData.get('email').touched">
+			Email Cannot be empty !!
+		</div>
+		<div class="msg" *ngIf="loginData.get('email').hasError('pattern') && loginData.get('email').touched">
+			Invalid Email !!
+		</div>
+		</div>
+		<div class="form-group">
+		<label>Enter Your Password</label>
+		<input type="password"  formControlName="password">
+		<div class="msg" *ngIf="loginData.get('password').hasError('required') && loginData.get('password').touched">
+			Password Cannot be empty !!
+		</div>
+		<div class="msg" *ngIf="loginData.get('password').hasError('pattern') && loginData.get('password').touched">
+			Invalid Password !!
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	  </div>
+	</form>
+	<div class="modal-footer"></div>
+	<p class="text-center">Already have an accaount?<a routerLink="../signup">Sign Up</a></p>
+  </div>
+</div>

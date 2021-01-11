@@ -1,0 +1,26 @@
+
+<div class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="section-head col-sm-12">
+                <h4>Services</h4>
+                <p>You also can be a proffessional in Programmimg, Design, Editing and Photography. We provide best teaching classes to you by well skilled teachers.
+                    You can solve your queries by contacting us anytime.
+                </p>
+            </div>
+            <div *ngFor="let a of services" class="col-lg-4 col-sm-6" data-aos-delay="100">
+                <div class="item">
+                    <span class="icon feature-box-col-one">
+                        <i><img class="icon" src="{{a.icon}}"></i>
+                    </span>
+                    <h6>{{a.name}}</h6>
+                    <p>{{a.details}}</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <p>&copy; Copyright 2021 | Created by Tanmoy</p>
+    </footer>
